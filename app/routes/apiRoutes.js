@@ -1,3 +1,7 @@
+// Your apiRoutes.js file should contain two routes:
+// A GET route with the url /api/friends. This will be used to display a JSON of all possible friends.
+// A POST routes /api/friends. This will be used to handle incoming survey results. This route will also be used to handle the compatibility logic.
+
 // ===============================================================================
 // LOAD DATA
 // We are linking our routes to a series of "data" sources.
@@ -33,6 +37,9 @@ module.exports = function (app) {
         if (friendData) {
             friendsData.push(req.body);
             res.json(true);
+        }
+        else {
+            res.join(false);
         }
     });
 
